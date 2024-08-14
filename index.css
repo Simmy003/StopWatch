@@ -1,0 +1,32 @@
+body{
+    background-color:thistle ;
+}
+
+.container{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.btn1, .btn2, .btn3{
+    height: 50px;
+    width: 70px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* .btn1:hover,.btn2:hover,.btn3:hover {
+    color: indigo;
+} */
+
+#start:hover,#stop:hover,#reset:hover {
+    background-color: rgb(172, 160, 220);
+}
