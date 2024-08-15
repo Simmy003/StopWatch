@@ -5,41 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="index.js" />
-
 </head>
 <body>
         <div class="container">
             <h4>STOPWATCH</h4>
             <div id="time">
-                <span class="digit" id="hour">
-                    00
+                <span class="digits" id="hour">
+                    00 
                 </span>
-                <span class="txt"> Hr </span>
-                <span class="digit" id="minute">
-                    00
+                <span class="txt">Hr</span>
+                :
+                <span class="digits" id="minute">
+                    00 
                 </span>
-                <span class="txt"> Min </span>
-                <span class="digit" id="second">
-                    00
+                <span class="txt">Min</span>
+                :
+                <span class="digits" id="second">
+                    00 
                 </span>
-                <span class="txt"> Sec </span>
-                <span class="digit" id="count">
-                    00
-                </span>
-            </div>
-            <div id="button">
+                <span class="txt">Sec</span>
+         </div>
+            <div id="buttons">
                 <button class="btn1" id="start">
-                    START
+                    START 
                 </button>
                 <button class="btn2" id="stop">
-                    STOP
+                    STOP 
                 </button>
                 <button class="btn3" id="reset">
-                    RESET
+                    RESET 
                 </button>
             </div>
         </div>
     </div>
+
+    <script>
+        let startButton = document.getElementById('start');
+        let stopButton = document.getElementById('stop');
+        let resetButton = document.getElementById('reset');
+        
+        let hour = 0o0;
+        let minute = 0o0;
+        let second = 0o0;
+        let count = 0o0;
+
+        startButton.addEventListener('click', function () {
+            timer = true;
+            stopWatch();
+        });
+        stopButton.addEventListener('click', function () {
+            timer = false;
+        });
+        resetButton.addEventListener('click', function () {
+            timer = false;
+            hour = 0;
+            minute = 0;
+            second = 0;
+            count = 0;
+            document.getElementById('hour').innerHTML = "00";
+            document.getElementById('minute').innerHTML = "00";
+            document.getElementById('second').innerHTML = "00";
+            document.getElementById('count').innerHTML = "00";
+        });
+        function stopWatch() {
+            if (timer) {
+                count++;
+                if (count == 100) {
+                    second++;
+                    count = 0;
+                }
+                if (second == 60) {
+                    minute++;
+                    second = 0;
+                }
+                if (minute == 60) {
+                    hour++;
+                    minute = 0;
+                    second = 0;
+                }
+                let hourString = hour;
+                let minuteString = minute;
+                let secondString = second;
+                let countString = count;
+                if (hour < 10) {
+                    hourString = "0" + hourString;
+                }
+                if (minute < 10) {
+                    minuteString = "0" + minuteString;
+                }
+                if (second < 10) {
+                    secondString = "0" + secondString;
+                }
+
+                if (count < 10) {
+                    countString = "0" + countString;
+                }
+                document.getElementById('hour').innerHTML = hourString;
+                document.getElementById('minute').innerHTML = minuteString;
+                document.getElementById('second').innerHTML = secondString;
+                document.getElementById('count').innerHTML = countString;
+                setTimeout(stopWatch, 10);
+            }
+        }
+    </script>
 </body>
 </html>

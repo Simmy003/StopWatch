@@ -1,32 +1,42 @@
-body{
-    background-color:thistle ;
+body {
+    font-family: Times New Roman;
+    background-color: thistle;
 }
 
-.container{
-    font-size: 50px;
-    font-weight: bold;
+.container {
     text-align: center;
 }
 
-.txt{
-    font-size: 20px;
+h4 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: bolder;
 }
 
-.btn1, .btn2, .btn3{
+.btn1,.btn2,.btn3 {
+    width: 100px;
     height: 50px;
-    width: 70px;
-    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 25px;
+    font-size: 20px;
+    transition: 0.7s;
     color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    transition: 0.4s;
-    cursor: pointer;
+    font-weight: 550;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    border: white;
 }
 
 /* .btn1:hover,.btn2:hover,.btn3:hover {
     color: indigo;
-} */
+    }*/
+    
+    #start:hover,#stop:hover,
+    #reset:hover {
+        background-color:rgb(218, 214, 163)
+    }
 
-#start:hover,#stop:hover,#reset:hover {
-    background-color: rgb(172, 160, 220);
+.digits {
+        font-size: 40px;
+        color: rgb(0, 0, 0);
 }
