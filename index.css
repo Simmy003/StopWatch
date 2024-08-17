@@ -10,6 +10,7 @@ body {
     height: 390px;
     width: 350px;
     margin-left: 750px;
+    margin-bottom: 90px;
 } 
 
 h4 {
@@ -17,6 +18,15 @@ h4 {
     font-size: 50px;
     font-weight: bolder;
 }
+
+/* .buttons{
+    margin-top: 70px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+} */
 
 .startButton, .stopButton, .resetButton {
     margin-top: 30px;
@@ -28,6 +38,7 @@ h4 {
     border-radius: 15px;
     transition: 0.5s;
     color: rgb(0, 0, 0);
+    border-color: cadetblue;
 }
 
 /* .btn1,.btn2,.btn3 {
@@ -48,10 +59,9 @@ h4 {
     color: rgb(160, 83, 215);
     }
     
-    /* #startButton:hover,#stopButton:hover,
-    #resetButton:hover {
-        background-color:rgb(183, 125, 230)
-    } */
+#startButton:hover,#stopButton:hover,#resetButton:hover {
+    background-color:rgb(183, 125, 230)
+    }
 
 .digits {
         font-size: 40px;
