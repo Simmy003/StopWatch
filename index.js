@@ -35,7 +35,7 @@ function stopWatch() {
 }
 
 function updateDisplay() {
-    const format = num => num.toString().padStart(2, '0');
+    const format = num => num.toString().padStart(2, '0');   //number to string ensuring it has 2 digits(3 as 03 or 11 as 11)
     document.getElementById('hour').innerHTML = format(hour);
     document.getElementById('minute').innerHTML = format(minute);
     document.getElementById('second').innerHTML = format(second);
